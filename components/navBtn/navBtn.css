@@ -1,0 +1,38 @@
+
+.navigation__btn-inner {
+	position: absolute;
+	top: calc(50% - 1px);
+	width: 30px;
+	height: 2px;
+	background-color: #000;
+}
+
+.navigation__btn-inner:before,
+.navigation__btn-inner:after {
+	background-color: #000;
+	display: block;
+	content: "";
+	width: 30px;
+	height: 2px;
+	transition: ease-out .3s;
+}
+.navigation__btn-inner:before {
+	transform: translateY(-8px);
+}
+.navigation__btn-inner:after {
+	transform: translateY(6px);
+}
+
+.active .navigation__btn-inner {
+	visibility: hidden;
+}
+
+.active .navigation__btn-inner:before {
+	visibility: visible;
+	transform: rotate(45deg) translateY(1px);
+}
+
+.active .navigation__btn-inner:after {
+	visibility: visible;
+	transform: rotate(-45deg) translateY(-1px);
+}
